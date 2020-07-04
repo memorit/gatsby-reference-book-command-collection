@@ -1,0 +1,31 @@
+{
+  "name": "command_collection",
+  "version": "1.0.0",
+  "description": "Webサイト高速化のための静的サイトジェネレーター活用入門 コマンド集",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memorit/gatsby-reference-book-command-collection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/memorit/gatsby-reference-book-command-collection/issues"
+  },
+  "homepage": "https://github.com/memorit/gatsby-reference-book-command-collection#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-sorting": "^5.0.1"
+  }
+}

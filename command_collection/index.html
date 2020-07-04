@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Command Collection</title>
+  </head>
+  <body>
+    <div class="flex inner">
+      <aside>
+        <ul>
+          <li><a href="#chap1">Chapter 1</a></li>
+          <li><a href="#chap2">Chapter 2</a></li>
+          <li><a href="#chap4">Chapter 4</a></li>
+          <li><a href="#chap5">Chapter 5</a></li>
+          <li><a href="#chap6">Chapter 6</a></li>
+          <li><a href="#chap7">Chapter 7</a></li>
+          <li><a href="#chap8">Chapter 8</a></li>
+          <li><a href="#apx">APPENDIX</a></li>
+          <li><a href="#setup1">SETUP 1</a></li>
+          <li><a href="#setup3">SETUP 3</a></li>
+          <li><a href="#setup4">SETUP 4</a></li>
+        </ul>
+      </aside>
+
+      <div class="mainCol">
+        <section id="mainBook">
+          <h1>Webサイト高速化のための静的サイトジェネレーター活用入門<span>GatsbyJSで実現する高速＆実用的なサイト構築</span></h1>
+
+          <section id="chap1">
+            <h2>Chapter 1</h2>
+
+            <section>
+              <h3>1-1-2</h3>
+
+              <dl>
+                <dt>Gatsby を利用するために必要な Gatsby CLI をインストール</dt>
+                <dd id="copyCode1">
+                  <button id="copyBtn1">COPY</button>
+                  <code id="copyElement1">npm install -g gatsby-cli</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>Gatsby が動くか確認</dt>
+                <dd id="copyCode2">
+                  <button id="copyBtn2">COPY</button>
+                  <code id="copyElement2">gatsby -v</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>1-1-3</h3>
+
+              <dl>
+                <dt>Gatsby 導入</dt>
+                <dd id="copyCode3">
+                  <button id="copyBtn3">COPY</button>
+                  <code id="copyElement3">gatsby new</code>
+                  <ul class="memo">
+                    <li>プロジェクト名を聞いてくるので好きな名前を入力</li>
+                    <li>
+                      使用するスターターを聞いてくるので、最もシンプルなスターターの「<span
+                        class="emphasis"
+                        >gatsby-starter-hello-world</span
+                      >」を選択
+                    </li>
+                    <li>
+                      インストール中に yarn と npm のどちらを使用するか確認されたら
+                      <span class="emphasis">yarn</span> を選択
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>1-1-5</h3>
+
+              <dl>
+                <dt>開発サーバーを起動（プロジェクトのルートにいることを確認）</dt>
+                <dd id="copyCode4">
+                  <button id="copyBtn4">COPY</button>
+                  <code id="copyElement4">gatsby develop</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>
+                  同じネットワーク上の他のデバイスからアクセスできるようにする場合、次のコマンドで開発サーバーを起動（http://localhost:8000/
+                  に加えて、IP アドレスの URL が示される）
+                </dt>
+                <dd id="copyCode5">
+                  <button id="copyBtn5">COPY</button>
+                  <code id="copyElement5">gatsby develop -H 0.0.0.0</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>1-7</h3>
+
+              <dl>
+                <dt>サイトを公開するために開発用サーバーを停止してビルドを実行する</dt>
+                <dd id="copyCode6">
+                  <button id="copyBtn6">COPY</button>
+                  <code id="copyElement6">gatsby build</code>
+                  <ul class="memo">
+                    <li>
+                      問題がなければ public/ フォルダの中にサイトのデータができる
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>
+                  gatsby develop や gatsby develop
+                  でエラーが出る場合などは次を実行してキャッシュを削除してみる
+                </dt>
+                <dd id="copyCode7">
+                  <button id="copyBtn7">COPY</button>
+                  <code id="copyElement7">gatsby clean</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>ビルドしたサイトの表示を確認する</dt>
+                <dd id="copyCode8">
+                  <button id="copyBtn8">COPY</button>
+                  <code id="copyElement8">gatsby serve</code>
+                  <ul class="memo">
+                    <li>http://localhost:9000/ にアクセスし表示を確認する</li>
+                  </ul>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="chap2">
+            <h2>Chapter 2</h2>
+
+            <section>
+              <h3>2-1-1</h3>
+
+              <dl>
+                <dt>GraphQL を開く</dt>
+                <dd id="copyCode9">
+                  <button id="copyBtn9">COPY</button>
+                  <code id="copyElement9">http://localhost:8000/___graphql</code>
+                  <ul class="memo">
+                    <li>
+                      コマンドではなく URL です
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>画像を扱うのに必要なプラグインを準備01</dt>
+                <dd id="copyCode10">
+                  <button id="copyBtn10">COPY</button>
+                  <code id="copyElement10">yarn add gatsby-image</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>画像を扱うのに必要なプラグインを準備02</dt>
+                <dd id="copyCode11">
+                  <button id="copyBtn11">COPY</button>
+                  <code id="copyElement11">yarn add gatsby-transformer-sharp gatsby-plugin-sharp</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>画像を扱うのに必要なプラグインを準備03</dt>
+                <dd id="copyCode12">
+                  <button id="copyBtn12">COPY</button>
+                  <code id="copyElement12">yarn add gatsby-source-filesystem</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="chap4">
+            <h2>Chapter 4</h2>
+
+            <section>
+              <h3>4-2-1</h3>
+
+              <dl>
+                <dt>Font Awesome でアイコンを表示するため react-fontawesome をインストール</dt>
+                <dd id="copyCode13">
+                  <button id="copyBtn13">COPY</button>
+                  <code id="copyElement13">yarn add @fortawesome/fontawesome-svg-core</code>
+                </dd>
+                <dd id="copyCode14">
+                  <button id="copyBtn14">COPY</button>
+                  <code id="copyElement14">yarn add @fortawesome/react-fontawesome</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>アイコンスタイルはフリーで利用できる Solid、Regular、Brands をインストール</dt>
+                <dd id="copyCode15">
+                  <button id="copyBtn15">COPY</button>
+                  <code id="copyElement15">yarn add @fortawesome/free-solid-svg-icons</code>
+                </dd>
+                <dd id="copyCode16">
+                  <button id="copyBtn16">COPY</button>
+                  <code id="copyElement16">yarn add @fortawesome/free-regular-svg-icons</code>
+                </dd>
+                <dd id="copyCode17">
+                  <button id="copyBtn17">COPY</button>
+                  <code id="copyElement17">yarn add @fortawesome/free-brands-svg-icons</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="chap5">
+            <h2>Chapter 5</h2>
+
+            <section>
+              <h3>5-1-1</h3>
+
+              <dl>
+                <dt>メタデータを追加するために React Helmet と gatsby-plugin-react-helmet をインストール</dt>
+                <dd id="copyCode18">
+                  <button id="copyBtn18">COPY</button>
+                  <code id="copyElement18">yarn add gatsby-plugin-react-helmet react-helmet</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>5-7-1</h3>
+
+              <dl>
+                <dt>Web app manifest と呼ばれるマニフェストファイルを追加するため gatsby-plugin-manifest をインストール</dt>
+                <dd id="copyCode19">
+                  <button id="copyBtn19">COPY</button>
+                  <code id="copyElement19">yarn add gatsby-plugin-manifest</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>5-7-2</h3>
+
+              <dl>
+                <dt>オフラインに対応するため gatsby-plugin-offline をインストール</dt>
+                <dd id="copyCode20">
+                  <button id="copyBtn20">COPY</button>
+                  <code id="copyElement20">yarn add gatsby-plugin-offline</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="chap6">
+            <h2>Chapter 6</h2>
+
+            <section>
+              <h3>6-4-1</h3>
+
+              <dl>
+                <dt>Contentful のデータを扱うのに必要なプラグイン gatsby-source-contentful をインストール</dt>
+                <dd id="copyCode21">
+                  <button id="copyBtn21">COPY</button>
+                  <code id="copyElement21">yarn add gatsby-source-contentful</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>6-4-2</h3>
+
+              <dl>
+                <dt>環境変数に指定した3つの値を指定して開発サーバーを起動</dt>
+                <dd id="copyCode22">
+                  <button id="copyBtn22">COPY</button>
+                  <code id="copyElement22">CONTENTFUL_SPACE_ID=xxxxxxxx CONTENTFUL_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxx CONTENTFUL_HOST=cdn.contentful.com gatsby develop -H 0.0.0.0</code>
+                  <ul class="memo">
+                    <li>
+                      ローカル環境で起動する場合はホストの指定を省略可
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="chap7">
+            <h2>Chapter 7</h2>
+
+            <section>
+              <h3>7-6-2</h3>
+
+              <dl>
+                <dt>リッチテキストの JSON 形式のデータを React コンポーネントに変換するため rich-text-react-renderer をインストール</dt>
+                <dd id="copyCode23">
+                  <button id="copyBtn23">COPY</button>
+                  <code id="copyElement23">yarn add @contentful/rich-text-react-renderer</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>7-7-1</h3>
+
+              <dl>
+                <dt>リッチテキスト内の要素を扱えるようにするため rich-text-types をインストール</dt>
+                <dd id="copyCode24">
+                  <button id="copyBtn24">COPY</button>
+                  <code id="copyElement24">yarn add @contentful/rich-text-types</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="chap8">
+            <h2>Chapter 8</h2>
+
+            <section>
+              <h3>8-3-2</h3>
+
+              <dl>
+                <dt>記事の説明を指定するため rich-text-plain-text-renderer をインストール</dt>
+                <dd id="copyCode25">
+                  <button id="copyBtn25">COPY</button>
+                  <code id="copyElement25">yarn add @contentful/rich-text-plain-text-renderer</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="apx">
+            <h2>APPENDIX</h2>
+
+            <section>
+              <h3>APPENDIX D</h3>
+
+              <dl>
+                <dt>RSS を設定するため gatsby-plugin-feed をインストール</dt>
+                <dd id="copyCode26">
+                  <button id="copyBtn26">COPY</button>
+                  <code id="copyElement26">yarn add gatsby-plugin-feed</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>APPENDIX E</h3>
+
+              <dl>
+                <dt>フォントデータをセルフホストで設定するため typeface-[フォント名] の形式でフォントをインストール</dt>
+                <dd id="copyCode27">
+                  <button id="copyBtn27">COPY</button>
+                  <code id="copyElement27">yarn add typeface-xxxxxxxx</code>
+                  <ul class="memo">
+                    <li>
+                      フォント名はすべて小文字で、スペースを「-」にして指定
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>フォントデータを先読みで設定するため gatsby-plugin-prefetch-google-fonts をインストール</dt>
+                <dd id="copyCode28">
+                  <button id="copyBtn28">COPY</button>
+                  <code id="copyElement28">yarn add gatsby-plugin-prefetch-google-fonts</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+        </section>
+
+        <section id="subBook">
+          <h1>[副読本] セットアップPDF<span>macOS</span></h1>
+
+          <section id="setup1">
+            <h2>SETUP 1</h2>
+
+            <section>
+              <h3>1-3</h3>
+
+              <dl>
+                <dt>git のインストール ▼ git がインストールされているか確認</dt>
+                <dd id="copyCode29">
+                  <button id="copyBtn29">COPY</button>
+                  <code id="copyElement29">git -v</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>git にユーザー名と Email アドレスを設定</dt>
+                <dd id="copyCode30">
+                  <button id="copyBtn30">COPY</button>
+                  <code id="copyElement30">git config --global user.name "name"</code>
+                </dd>
+                <dd id="copyCode31">
+                  <button id="copyBtn31">COPY</button>
+                  <code id="copyElement31">git config --global user.email "xxxxx@example.com"</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>nvm のインストール ▼ パスを書き込むファイルを作成</dt>
+                <dd id="copyCode32">
+                  <button id="copyBtn32">COPY</button>
+                  <code id="copyElement32">touch ~/.zshrc</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>nvm のインストールが完了したらターミナルを再起動</dt>
+                <dd id="copyCode33">
+                  <button id="copyBtn33">COPY</button>
+                  <code id="copyElement33">source ~/.zshrc</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>nvm がインストールされているか確認</dt>
+                <dd id="copyCode34">
+                  <button id="copyBtn34">COPY</button>
+                  <code id="copyElement34">command -v nvm</code>
+                  <ul class="memo">
+                    <li>
+                      nvm と表示されればインストールは完了
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>node.js のインストール ▼ ローカルにインストールされている node.js を確認</dt>
+                <dd id="copyCode35">
+                  <button id="copyBtn35">COPY</button>
+                  <code id="copyElement35">nvm ls</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>インストール可能なものを確認</dt>
+                <dd id="copyCode36">
+                  <button id="copyBtn36">COPY</button>
+                  <code id="copyElement36">nvm ls-remote</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>LTS（Long Term Support）の最新版をインストール</dt>
+                <dd id="copyCode37">
+                  <button id="copyBtn37">COPY</button>
+                  <code id="copyElement37">nvm install --lts --latest-npm</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>ローカルにインストールされているバージョンを確認</dt>
+                <dd id="copyCode38">
+                  <button id="copyBtn38">COPY</button>
+                  <code id="copyElement38">nvm ls</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>バージョンを確認</dt>
+                <dd id="copyCode39">
+                  <button id="copyBtn39">COPY</button>
+                  <code id="copyElement39">node -v</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>yarn のインストール</dt>
+                <dd id="copyCode40">
+                  <button id="copyBtn40">COPY</button>
+                  <code id="copyElement40">curl -o- -L https://yarnpkg.com/install.sh | bash</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>インストールが完了したら設定を読み込みなおし</dt>
+                <dd id="copyCode41">
+                  <button id="copyBtn41">COPY</button>
+                  <code id="copyElement41">source ~/.zshrc</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>バージョンを確認</dt>
+                <dd id="copyCode42">
+                  <button id="copyBtn42">COPY</button>
+                  <code id="copyElement42">yarn -v</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>インストール場所確認</dt>
+                <dd id="copyCode43">
+                  <button id="copyBtn43">COPY</button>
+                  <code id="copyElement43">which yarn</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="setup3">
+            <h2>SETUP 3</h2>
+
+            <section>
+              <h3>3-2-3</h3>
+
+              <dl>
+                <dt>リポジトリの新規作成から行うため .git フォルダを削除</dt>
+                <dd id="copyCode44">
+                  <button id="copyBtn44">COPY</button>
+                  <code id="copyElement44">rm -rf .git</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>ローカルのリポジトリを新規作成</dt>
+                <dd id="copyCode45">
+                  <button id="copyBtn45">COPY</button>
+                  <code id="copyElement45">git init</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>すべてのファイルをインデックスに登録</dt>
+                <dd id="copyCode46">
+                  <button id="copyBtn46">COPY</button>
+                  <code id="copyElement46">git add -A</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>メッセージを指定してコミット</dt>
+                <dd id="copyCode47">
+                  <button id="copyBtn47">COPY</button>
+                  <code id="copyElement47">git commit -m "first commit"</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>GitHub に作成したリポジトリをリモートリポジトリとして指定</dt>
+                <dd id="copyCode48">
+                  <button id="copyBtn48">COPY</button>
+                  <code id="copyElement48">git remote add origin https://github.com/xxxxx/gatsby-essentials.git</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>リモートリポジトリへプッシュ</dt>
+                <dd id="copyCode49">
+                  <button id="copyBtn49">COPY</button>
+                  <code id="copyElement49">git push -u origin master</code>
+                </dd>
+              </dl>
+            </section>
+
+            <section>
+              <h3>3-4</h3>
+
+              <dl>
+                <dt>ローカル環境でビルド</dt>
+                <dd id="copyCode50">
+                  <button id="copyBtn50">COPY</button>
+                  <code id="copyElement50">gatsby build</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>問題がなければすべての変更をインデックスに登録</dt>
+                <dd id="copyCode51">
+                  <button id="copyBtn51">COPY</button>
+                  <code id="copyElement51">git add -A</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>メッセージを指定してコミット</dt>
+                <dd id="copyCode52">
+                  <button id="copyBtn52">COPY</button>
+                  <code id="copyElement52">git commit -m "コミットメッセージ"</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>リモートリポジトリへプッシュ</dt>
+                <dd id="copyCode53">
+                  <button id="copyBtn53">COPY</button>
+                  <code id="copyElement53">git push</code>
+                </dd>
+              </dl>
+            </section>
+          </section>
+
+          <section id="setup4">
+            <h2>SETUP 4</h2>
+
+            <section>
+              <h3>4-7</h3>
+
+              <dl>
+                <dt>Contentful にログイン</dt>
+                <dd id="copyCode54">
+                  <button id="copyBtn54">COPY</button>
+                  <code id="copyElement54">npx contentful-cli login --management-token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>インポートを実行</dt>
+                <dd id="copyCode55">
+                  <button id="copyBtn55">COPY</button>
+                  <code id="copyElement55">npx contentful-cli space import --config importConfig.json</code>
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>Contentful からログアウト</dt>
+                <dd id="copyCode56">
+                  <button id="copyBtn56">COPY</button>
+                  <code id="copyElement56">npx contentful-cli logout</code>
+                  <ul class="memo">
+                    <li>ログアウトするか確認されたら Y を入力</li>
+                  </ul>
+                </dd>
+              </dl>
+            </section>
+          </section>
+        </section>
+      </div>
+    </div>
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function () {
+        // ページ内リンク、#非表示。スムーズスクロール
+        $('a[href^="#"]').click(function (event) {
+          var id = $(this).attr("href"),
+              target = $(id).offset().top;
+          $("html, body").animate({ scrollTop: target }, 300);
+          event.preventDefault();
+          return false;
+        });
+      });
+
+      $("[id^=copyCode]").each(function (index) {
+        const copyBtn = $(this).children("[id^=copyBtn]");
+        const copyElementId = $(this).children("[id^=copyElement]").attr("id");
+
+        $(copyBtn).on("click", function () {
+          const copyElement = document.getElementById(copyElementId);
+          const range = document.createRange();
+          range.selectNode(copyElement);
+          window.getSelection().addRange(range);
+          document.execCommand("copy");
+          window.getSelection().removeAllRanges();
+        });
+      });
+    </script>
+  </body>
+</html>
