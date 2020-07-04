@@ -4,4 +4,4 @@ Webサイト高速化のための静的サイトジェネレーター活用入�
 ---
 
 コマンド集
-[コマンド集](/command_collection "コマンド集")
+[コマンド集](/command_collection)
